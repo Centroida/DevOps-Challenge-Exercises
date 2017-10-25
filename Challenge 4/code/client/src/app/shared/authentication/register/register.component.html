@@ -1,0 +1,105 @@
+<div class="modal-dialog">
+    <div class="modal-content">
+
+        <div class="modal-header">
+            <button type="button" class="close" (click)="close()">&times;</button>
+            <h4 class="modal-title">{{title || 'Register'}}</h4>
+        </div>
+        <form class="form-horizontal" (ngSubmit)='registerUser(registerForm.value)' #registerForm=ngForm>
+
+            <div class="modal-body">
+                <div class="main-login main-center">
+                    <div class="form-group">
+                        <label for="username" class="cols-sm-2 control-label">Username</label>
+                        <div class="cols-sm-10">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
+                                <input class='form-control' placeholder='Username' name="username" (ngModel)="user.username" #usernameInput=ngModel required minlength="4">
+
+                            </div>
+
+                        </div>
+                        <label class="validation-feedback" *ngIf="(usernameInput.errors && (usernameInput.dirty || usernameInput.touched)) || usernameInput.errors && mouseover">
+                                <span *ngIf="usernameInput.errors.required">Username is required</span>
+                                <span *ngIf="usernameInput.errors.minlength">Username must be at least 4 characters </span>
+                            </label>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password" class="cols-sm-2 control-label">Password</label>
+                        <div class="cols-sm-10">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+                                <input class='form-control' placeholder='Password' type='password' name="password" (ngModel)="user.password" #passwordInput=ngModel required minlength="8" pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{2,}$">
+                            </div>
+                        </div>
+                        <label class="validation-feedback" *ngIf="(passwordInput.errors && (passwordInput.dirty || passwordInput.touched)) || passwordInput.errors && mouseover">
+                            <span *ngIf="passwordInput.errors.required">Password is required</span>
+                            <span *ngIf="passwordInput.errors.minlength">Password must be 8 characters long, we need another {{passwordInput.errors.minlength.requiredLength - passwordInput.errors.minlength.actualLength}} characters </span>
+                            <span *ngIf="passwordInput.errors.pattern">Password must contain at least one uppercase letter and at least one number.</span>
+                        </label>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="firstName" class="cols-sm-2 control-label">Your First Name</label>
+                        <div class="cols-sm-10">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+                                <input class='form-control' placeholder='First name' name="firstName" (ngModel)="user.firstName" #firstNameInput=ngModel required>
+                            </div>
+                        </div>
+                        <label class="validation-feedback" *ngIf="(firstNameInput.errors && (firstNameInput.dirty || firstNameInput.touched)) || firstNameInput.errors && mouseover">
+                                <span *ngIf="firstNameInput.errors.required">First Name is required</span>
+                            </label>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="lastName" class="cols-sm-2 control-label">Your Last Name</label>
+                        <div class="cols-sm-10">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+                                <input class='form-control' placeholder='Last name' name="lastName" (ngModel)="user.lastName" #lastNameInput=ngModel required>
+                            </div>
+                        </div>
+                        <label class="validation-feedback" *ngIf="(lastNameInput.errors && (lastNameInput.dirty || lastNameInput.touched)) || lastNameInput.errors && mouseover">
+                            <span *ngIf="lastNameInput.errors.required">Last Name is required</span>
+                        </label>
+                    </div>
+                    <div class="form-group">
+                        <label for="address" class="cols-sm-2 control-label">Address for delivery</label>
+                        <div class="cols-sm-10">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-map-marker" aria-hidden="true"></i></span>
+                                <input class='form-control' placeholder='City, Street, Number, Zip Code' name="address" (ngModel)="user.address" #addressInput=ngModel required>
+                            </div>
+                        </div>
+                        <label class="validation-feedback" *ngIf="(addressInput.errors && (addressInput.dirty || addressInput.touched)) || addressInput.errors && mouseover">
+                            <span *ngIf="addressInput.errors.required">Address is required for delivery</span>
+                        </label>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone" class="cols-sm-2 control-label">Mobile Number</label>
+                        <div class="cols-sm-10">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-earphone" aria-hidden="true"></i></span>
+                                <input class='form-control' placeholder='Phone' name="phone" (ngModel)="user.phone" #phoneInput=ngModel required>
+                                <span class="input-group-addon red" *ngIf="!phoneInput.valid && phoneInput.touched || mouseover && !phoneInput.valid">Required</span>
+                            </div>
+                        </div>
+                        <label class="validation-feedback" *ngIf="(phoneInput.errors && (phoneInput.dirty || phoneInput.touched)) || phoneInput.errors && mouseover">
+                                <span *ngIf="phoneInput.errors.required">Last Name is required</span>
+                            </label>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <a class="btn btn-primary left" (click)="showLoginModal();">Log in</a>
+
+                <span (mouseenter)="mouseover=true" (mouseleave)="mouseover=false">
+            <button class="btn btn-success" type="submit" [disabled]="!registerForm.valid">Register</button></span>
+                <button type="button" class="btn btn-default" (click)="close()">Cancel</button>
+            </div>
+        </form>
+
+    </div>
+</div>

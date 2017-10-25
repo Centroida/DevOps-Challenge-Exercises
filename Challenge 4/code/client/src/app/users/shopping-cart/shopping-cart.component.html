@@ -1,0 +1,62 @@
+<div class="container">
+    <div class="col-md-12">
+        <div class="heading-section">
+            <h2>Your orders</h2>
+            <img src="/assets/images/under-heading.png" alt="">
+        </div>
+    </div>
+    <h1 *ngIf='cart.price <= 0'>The cart is empty!</h1>
+    <div class="row">
+        <ng-container *ngFor="let customPizza of cart.customPizza;">
+            <div class="customPizza row">
+                <div class=" col-md-1 customPizza-img">
+                    <img class="img-responsive" src="/assets/images/custom-pizza.png" alt="custom customPizza">
+                </div>
+                <div class="col-md-8 customPizza-description">
+                    <h3>Custom Pizza</h3>
+                    <p>({{customPizza | showPizzaProducts}})
+                    </p>
+                </div>
+                <div class="col-xs-1 remove-btn-container relative">
+                    <span class="middle">{{customPizza.price | currency:'USD':true }}</span>
+                </div>
+                <div class="col-xs-1 remove-btn-container relative" (click)='removeCustomPizzaOrder(customPizza)'>
+                    <button class="btn btn-warning remove-btn middle">Remove</button>
+                </div>
+
+            </div>
+            <hr>
+        </ng-container>
+        <ng-container *ngFor="let pizza of cart.pizza;">
+            <div class="pizza row">
+                <div class=" col-md-1 pizza-img">
+                    <img class="img-responsive" src="{{pizza.imgUrl}}" alt="Pizza {{pizza.name}}">
+                </div>
+                <div class="col-md-8 pizza-description">
+                    <h3>{{pizza.name}}</h3>
+                </div>
+                <div class="col-xs-1 remove-btn-container relative">
+                    <span class="middle">{{pizza.price | currency:'USD':true }}</span>
+                </div>
+                <div class="col-xs-1 remove-btn-container relative" (click)='removeClassicPizzaOrder(pizza)'>
+                    <button class="btn btn-warning remove-btn middle">Remove</button>
+                </div>
+
+            </div>
+            <hr>
+        </ng-container>
+        <div *ngIf='cart.price > 0' class="purchase">
+            <div class="col-md-7"></div>
+            <div class="col-md-2 total-text">
+                <h4>All Total:</h4>
+            </div>
+            <div class="col-md-1">
+                <h4>{{cart.price | currency:'USD':true }}</h4>
+            </div>
+            <div class="col-md-1 purchase-btn-container" (click)='orderPizza()'>
+                <button class="btn btn-success purchase-btn">Purchase</button>
+            </div>
+        </div>
+
+    </div>
+</div>

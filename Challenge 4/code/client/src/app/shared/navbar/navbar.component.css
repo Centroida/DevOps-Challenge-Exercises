@@ -1,0 +1,88 @@
+/*-- Header --*/
+
+#top-header {
+    background-color: #333;
+    color: #fff;
+}
+
+.home-account a {
+    display: inline-block;
+    margin-right: 15px;
+    padding: 10px 0;
+    font-size: 13px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+#top-header a:hover {
+    color: #09F;
+    cursor: pointer;
+}
+
+.cart-info {
+    text-align: right;
+    padding: 8px 0;
+    font-size: 13px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.logo {
+    padding: 20px 0;
+}
+
+.main-menu ul {
+    padding: 0px;
+    margin: 0px;
+    text-align: center;
+}
+
+.main-menu li {
+    list-style: none;
+    display: inline-block;
+    padding: 40px 0;
+}
+
+.main-menu a {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    color: #f78e21;
+    text-transform: uppercase;
+    margin-right: 35px;
+}
+
+.main-menu a:hover {
+    color: #09F;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown li {
+    list-style: none;
+    width: 100%;
+    padding-left: 10px;
+}
+
+.dropdown li:hover {
+    background-color: #222;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    padding: 0;
+    cursor: pointer;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+/*-- End Header --*/

@@ -1,0 +1,37 @@
+<div id="all-orders">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div id="orders-heading">
+                    <h1>Your Orders</h1>
+                    <img src="assets/images/under-heading.png" alt="">
+                </div>
+            </div>
+        </div>
+        <h1 *ngIf="orders.length === 0">No orders yet!</h1>
+        <div class="table-responsive" *ngIf="orders.length > 0">
+            <p>*If your recent order has status "Delivered", but you didn't receive it yet, please contact us!</p>
+            <table class="table table-hover" id="my-orders-table" data-show-toggle="false">
+                <thead>
+                    <tr class="row">
+                        <th class="col-sm-3">DATE</th>
+                        <th class="col-sm-5">DELIVER TO</th>
+                        <th class="col-sm-2">TOTAL</th>
+                        <th class="col-sm-3">STATUS</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="row" *ngFor="let order of orders?.reverse()">
+                        <td class="col-sm-3">{{order.date | date:'short' }}</td>
+                        <td class="col-sm-5">{{order.address}}</td>
+                        <td class="col-sm-2">
+                            <a id="thumbnail" href="#">{{order.items.price | currency:'USD':true }}</a>
+                            <div id="details">{{order.items | orderDetails }}</div>
+                        </td>
+                        <td class="col-sm-3"><i class="fa fa-check fa-fw icon" aria-hidden="true"> </i>{{order.date | deliveryStatus}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

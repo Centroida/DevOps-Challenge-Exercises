@@ -1,0 +1,25 @@
+.pizza {
+    margin-bottom: 15px;
+}
+
+.pizza-img {
+    align-items: center;
+}
+
+.purchase {
+    text-align: right;
+}
+
+.heading-section {
+    padding: 10px 0 25px 0;
+}
+
+.relative {
+    position: relative;
+    height: 8vh;
+}
+
+.middle {
+    position: absolute;
+    top: 50%;
+}

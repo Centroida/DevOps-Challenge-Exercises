@@ -1,0 +1,217 @@
+<div class="product-page">
+    <div class="container">
+        <div class="row row-no-padding">
+            <div class="padding-top-bottom">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="heading-section row-no-padding">
+                            <h2>You can order pizza on your taste</h2>
+                            <img src="/assets/images/under-heading.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3 col-sm-6">
+                        <div class="service-item">
+                            <div class="icon">
+                                <i class="fa bold">1</i>
+                            </div>
+                            <h4>Select a Dough</h4>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="service-item">
+                            <div class="icon">
+                                <i class="fa bold">2</i>
+                            </div>
+                            <h4>Select addjectives</h4>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="service-item">
+                            <div class="icon">
+                                <i class="fa bold">3</i>
+                            </div>
+                            <h4>Check an order</h4>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="service-item">
+                            <div class="icon">
+                                <i class="fa bold">4</i>
+                            </div>
+                            <h4>Add to Cart</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <form (ngSubmit)='addToCart()' #documentEditForm="ngForm">
+                <div class="col-sm-3">
+                    <div class="row row-no-padding">
+                        <div class="col-sm-6 form-group">
+                            <h1>Dough</h1>
+                            <div class="yellow-line"></div>
+                            <fieldset ngModelGroup="dough" required>
+                                <ul>
+                                    <li *ngFor="let dough of custompizza.dough;"><input type="radio" id="{{dough.id}}" name="dough" value="white" (change)="add($event)" />
+                                        <label for="{{dough.id}}"><img src="https://pizzalab.bg/upload/products/{{dough.id}}.png" /><br> {{dough.name}}</label>
+                                    </li>
+
+                                </ul>
+                            </fieldset>
+
+                        </div>
+                        <div class="col-sm-6 form-group">
+                            <h1>Sauce</h1>
+                            <div class="red-line"></div>
+                            <fieldset ngModelGroup="sauce">
+                                <ul>
+                                    <li *ngFor="let sauce of custompizza.sauce;"><input type="checkbox" id="{{sauce.id}}" (change)="add($event)" />
+                                        <label for="{{sauce.id}}"><img src="https://pizzalab.bg/upload/products/{{sauce.id}}.png" /><br> {{sauce.name}}</label>
+                                    </li>
+                                </ul>
+                            </fieldset>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-3 form-group">
+                    <h1>Cheese</h1>
+                    <div class="yellow-line"></div>
+                    <fieldset ngModelGroup="cheese">
+                        <ul>
+                            <li class="col-md-6" *ngFor="let cheese of custompizza.cheese;"><input type="checkbox" id="{{cheese.id}}" (change)="add($event)" />
+                                <label for="{{cheese.id}}"><img src="https://pizzalab.bg/upload/products/{{cheese.id}}.png" /><br> {{cheese.name}}</label>
+                            </li>
+                        </ul>
+                    </fieldset>
+                </div>
+
+                <div class="col-sm-3 form-group">
+                    <h1>Meat</h1>
+                    <div class="red-line"></div>
+                    <fieldset ngModelGroup="meat">
+                        <ul>
+                            <li class="col-md-6" *ngFor="let meat of custompizza.meat;"><input type="checkbox" id="{{meat.id}}" (change)="add($event)" />
+                                <label for="{{meat.id}}"><img src="https://pizzalab.bg/upload/products/{{meat.id}}.png" /><br> {{meat.name}}</label>
+                            </li>
+                        </ul>
+                    </fieldset>
+
+                </div>
+
+
+                <div class="col-sm-3 form-group">
+                    <h1>Vegetables</h1>
+                    <div class="yellow-line"></div>
+                    <fieldset ngModelGroup="vegetables">
+                        <ul>
+                            <li class="col-md-6" *ngFor="let vegetables of custompizza.vegetables;"><input type="checkbox" id="{{vegetables.id}}" (change)="add($event)" />
+                                <label for="{{vegetables.id}}"><img src="https://pizzalab.bg/upload/products/{{vegetables.id}}.png" /><br> {{vegetables.name}}</label>
+                            </li>
+                        </ul>
+                    </fieldset>
+
+                </div>
+            </form>
+
+        </div>
+
+        <h1>My Pizza:</h1>
+
+        <div class="row row-no-padding">
+            <div class="col-sm-3">
+                <div class="row row-no-padding">
+                    <div class="col-sm-6 form-group">
+                        <h1>Dough</h1>
+                        <div class="yellow-line"></div>
+                        <div>
+                            <ul>
+                                <ng-container *ngFor="let dough of custompizza.dough;">
+                                    <li *ngIf="dough.add === true">
+                                        <img src="https://pizzalab.bg/upload/products/{{dough.id}}.png" /><br> {{dough.name}}
+                                    </li>
+                                </ng-container>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 form-group">
+                        <h1>Sauce</h1>
+                        <div class="red-line"></div>
+                        <div>
+                            <ul>
+                                <ng-container *ngFor="let sauce of custompizza.sauce;">
+                                    <li *ngIf="sauce.add === true">
+                                        <img src="https://pizzalab.bg/upload/products/{{sauce.id}}.png" /><br> {{sauce.name}}
+                                    </li>
+                                </ng-container>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3 form-group">
+                <h1>Cheese</h1>
+                <div class="yellow-line"></div>
+                <div>
+                    <ul>
+                        <ng-container *ngFor="let cheese of custompizza.cheese;">
+                            <li class="col-md-6" *ngIf="cheese.add === true">
+                                <img src="https://pizzalab.bg/upload/products/{{cheese.id}}.png" /><br> {{cheese.name}}
+                            </li>
+                        </ng-container>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-sm-3 form-group">
+                <h1>Meat</h1>
+                <div class="red-line"></div>
+                <div>
+                    <ul>
+                        <ng-container *ngFor="let meat of custompizza.meat;">
+                            <li class="col-md-6" *ngIf="meat.add === true">
+                                <img src="https://pizzalab.bg/upload/products/{{meat.id}}.png" /><br> {{meat.name}}
+                            </li>
+                        </ng-container>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-sm-3 form-group">
+                <h1>Vegetables</h1>
+                <div class="yellow-line"></div>
+                <div>
+                    <ul>
+                        <ng-container *ngFor="let vegetables of custompizza.vegetables;">
+                            <li class="col-md-6" *ngIf="vegetables.add === true">
+                                <img src="https://pizzalab.bg/upload/products/{{vegetables.id}}.png" /><br> {{vegetables.name}}
+                            </li>
+                        </ng-container>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="row row-no-padding bottom-border hidden-sm hidden-xs">
+            <div class="col-sm-3">
+                <div class="row row-no-padding">
+                    <div class="col-sm-6">
+                        <div class="yellow-line"></div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="red-line"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="yellow-line"></div>
+            </div>
+            <div class="col-sm-3">
+                <div class="red-line"></div>
+            </div>
+            <div class="col-sm-3">
+                <div class="yellow-line"></div>
+            </div>
+        </div>
+
+        <button class="btn btn-success col-sm-offset-5 col-sm-2 cart-button" (click)="documentEditForm.ngSubmit.emit()">{{custompizza.price | currency:'USD':true }} Add to cart</button>
+    </div>
+</div>

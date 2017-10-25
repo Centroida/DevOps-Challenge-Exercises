@@ -1,0 +1,51 @@
+/*
+/* Created by Filipe Pina
+ * Specific styles of signin, register, component
+ */
+
+
+/*
+ * General styles
+ */
+
+input,
+input::-webkit-input-placeholder {
+    font-size: 11px;
+    padding-top: 3px;
+}
+
+.modal-body {
+    height: 30vh;
+    overflow-y: auto;
+}
+
+input.ng-invalid {
+    border-color: red;
+}
+
+input.ng-valid {
+    border-color: green;
+}
+
+.main-center {
+    margin-top: 30px;
+    margin: 0 auto;
+    max-width: 330px;
+}
+
+.login-button {
+    margin-top: 5px;
+}
+
+.login-register {
+    font-size: 11px;
+    text-align: center;
+}
+
+.validation-feedback {
+    color: red;
+}
+
+.left {
+    float: left;
+}

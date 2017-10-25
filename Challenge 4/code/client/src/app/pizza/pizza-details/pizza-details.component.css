@@ -1,0 +1,99 @@
+.portfolio-wrapper {
+    margin-bottom: 2%;
+}
+
+.label-text a {
+    color: #333;
+}
+
+.label-text a:hover {
+    color: #f78e21;
+}
+
+.label-text h3 {
+    margin: 10px 0 2px 0;
+    font-size: 16px;
+    font-weight: 700;
+    color: #333;
+    text-transform: uppercase;
+}
+
+.label-text span {
+    color: #777;
+    text-transform: uppercase;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    display: block;
+    color: #f78e21;
+}
+
+.hover-iner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.hover-iner a {
+    position: absolute;
+    top: 35%;
+    left: 43%;
+    margin-left: -18px;
+    margin-top: -18px;
+    background-color: rgba(0, 0, 0, 0.1);
+    border: 1px solid #f78e21;
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+    color: #fff;
+    text-align: center;
+}
+
+.hover-iner img {
+    max-width: 80%;
+}
+
+.hover-iner span {
+    position: absolute;
+    text-transform: uppercase;
+    color: #fff;
+    margin-top: 190px;
+    text-align: center;
+    font-size: 13px;
+    width: 100%;
+    color: #f78e21;
+    font-weight: 300;
+}
+
+.hover {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    visibility: hidden;
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.portfolio-thumb img {
+    width: 100%;
+}
+
+.portfolio-thumb {
+    position: relative;
+}
+
+.portfolio-wrapper:hover .portfolio-thumb .hover {
+    visibility: visible;
+    opacity: 1;
+    transition: all 0.3s ease-in;
+}
+
+.portfolio-wrapper {
+    overflow: hidden;
+    padding-top: 20px;
+}
+
+.pizza {
+    cursor: pointer;
+}

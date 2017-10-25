@@ -1,0 +1,4 @@
+
+const DB_CONNECTION_STRING = "mongodb://1337:oqDxpjMqwDAJmDY045ABHh0qkuYEbRPr1ra9bX1Nj7JQRpOxF2wtduFKj3reLt2yJrtVEpeZhAwQ4BFc0Z209Q==@1337.documents.azure.com:10255/?ssl=true"
+const APP_SECRET = "330e7b0775561c6e95797d4dd306a150046e239986f0a1373230fda0235bda8c";
+module.exports = { APP_SECRET, DB_CONNECTION_STRING };

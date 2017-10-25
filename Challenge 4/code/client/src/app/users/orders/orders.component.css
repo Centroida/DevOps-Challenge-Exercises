@@ -1,0 +1,21 @@
+#orders-heading {
+    text-align: center;
+    padding: 30px 0 30px 0;
+}
+
+#thumbnail {
+	display: block;
+}
+
+#thumbnail:hover + #details {
+	display: block;
+}
+
+#details {
+	display: none;
+	color: #ffffff;
+	background-color: rgba(0, 0, 0, 0.51);
+    text-align: center;
+  padding: 10px;
+  opacity: 0.5;
+}

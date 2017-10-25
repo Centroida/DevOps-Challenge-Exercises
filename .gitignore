@@ -1,0 +1,8 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+.DS_Store
+/Challenge1/code/packages
+/Challenge3/code/packages
+/.vs/

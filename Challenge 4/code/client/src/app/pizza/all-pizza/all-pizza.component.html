@@ -1,0 +1,33 @@
+<div id="products-post">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div id="product-heading">
+                    <h2>Hungry ?</h2>
+                    <img src="assets/images/under-heading.png" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="filters col-md-12 col-xs-12">
+                <ul id="filters" class="clearfix" (click)='changeFilter($event)'>
+                    <li><span class="filter">All</span></li>
+                    <li><span class="filter">Vegeterian</span></li>
+                    <li><span class="filter">Meat</span></li>
+                </ul>
+            </div>
+        </div>
+        <ul id="Container">
+            <div class='row'>
+                <li *ngFor='let pz of pizza | pizzaFilter: filter | paginate: {itemsPerPage: 6, currentPage: currentPage}; let i = index'>
+                    <div class="clearfix" *ngIf="i % 3 == 0"></div>
+                    <app-pizza-details [pizza]=pz></app-pizza-details>
+                </li>
+            </div>
+        </ul>
+        <div class='row'>
+            <pagination-controls class='my-pagination' (pageChange)="pageChanged($event)" autoHide="true" directionLinks="false">
+            </pagination-controls>
+        </div>
+    </div>
+</div>
