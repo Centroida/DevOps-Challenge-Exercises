@@ -38,13 +38,17 @@ See details about the [Challenge 3](./Challenge3/README.md).
 |Resource Management Automation|https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-overview |
 |Containerization|https://docs.microsoft.com/en-us/azure/container-service/kubernetes/|
 |Azure Functions| https://docs.microsoft.com/en-us/azure/azure-functions/|
-|Azure SQL Database|(https://docs.microsoft.com/en-us/azure/sql-database/)|
+|Azure SQL Database|https://docs.microsoft.com/en-us/azure/sql-database/|
 |Azure Functions as Infrastrucutre as Code | https://pgroene.wordpress.com/2017/01/27/use-vsts-to-deploy-functions-as-infrastructure-as-code/|
 |Azure Functions CI| https://www.joshcarlisle.io/blog/2017/5/17/visual-studio-2017-tools-for-azure-functions-and-continuous-integration-with-vsts|
 | Infrastructure as Code | http://infrastructure-as-code.com/ |
 | Virtual Machines vs Containers | https://www.techrepublic.com/article/containers-vs-virtual-machines-a-simplified-answer-to-a-complex-question/ |
 
 ## Literature
+|Ttile|Link|
+|---|---|
 |DevOps handbook| https://www.goodreads.com/book/show/26083308-the-devops-handbook |
-|TypeScript Language Specification|https://github.com/Microsoft/TypeScript/blob/master/doc/spec.md |
+|The Phoenix Project|https://www.goodreads.com/book/show/17255186-the-phoenix-project |
+| Release it!|https://www.goodreads.com/book/show/1069827.Release_It_|
+
 
