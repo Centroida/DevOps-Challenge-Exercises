@@ -27,3 +27,24 @@ After some investigation, an Azure Function can do the trick to fulfill this req
 In this challenge, you will create a new Azure Serverless Function, and make this a part of your application. The function should take care of sending a Mail or SMS (look at Twilio) confirmation after you have placed an order. First you will write a simple Azure Function that you will expose publicly. Then you will create an ARM template to create the neccessary resources and publish the function from the pipeline. Update your website or service (or both) to use this Azure Function and publish the update with the pipelines.
 
 See details about the [Challenge 3](./Challenge3/README.md).
+
+
+## Useful links
+|Ttile|Link|
+|---|---|
+|General definition of DevOps|https://theagileadmin.com/what-is-devops/|
+|Implementing DevOps|http://usblogs.pwc.com/emerging-technology/a-cios-devops-approach-to-resolving-the-agility-stability-paradox/ |
+|Build and Release|https://docs.microsoft.com/en-us/vsts/build-release/ |
+|Resource Management Automation|https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-overview |
+|Containerization|https://docs.microsoft.com/en-us/azure/container-service/kubernetes/|
+|Azure Functions| https://docs.microsoft.com/en-us/azure/azure-functions/|
+|Azure SQL Database|(https://docs.microsoft.com/en-us/azure/sql-database/)|
+|Azure Functions as Infrastrucutre as Code | https://pgroene.wordpress.com/2017/01/27/use-vsts-to-deploy-functions-as-infrastructure-as-code/|
+|Azure Functions CI| https://www.joshcarlisle.io/blog/2017/5/17/visual-studio-2017-tools-for-azure-functions-and-continuous-integration-with-vsts|
+| Infrastructure as Code | http://infrastructure-as-code.com/ |
+| Virtual Machines vs Containers | https://www.techrepublic.com/article/containers-vs-virtual-machines-a-simplified-answer-to-a-complex-question/ |
+
+## Literature
+|DevOps handbook| https://www.goodreads.com/book/show/26083308-the-devops-handbook |
+|TypeScript Language Specification|https://github.com/Microsoft/TypeScript/blob/master/doc/spec.md |
+
