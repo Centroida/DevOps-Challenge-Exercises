@@ -64,9 +64,6 @@ Download the function app that you created in achievement 1 and structure them a
 
 Create a VSTS build pipeline that will "build" the Azure Function app (actually just package the file) and copy the build artifacts for release. Then create a release pipeline that uses the WebApp Deploy task to release the function app to Azure.
 
-Recommended reading:
-* https://pgroene.wordpress.com/2017/01/27/use-vsts-to-deploy-functions-as-infrastructure-as-code/
-* https://www.joshcarlisle.io/blog/2017/5/17/visual-studio-2017-tools-for-azure-functions-and-continuous-integration-with-vsts
 
 ### Create a VSTS build pipeline
 
@@ -98,7 +95,7 @@ Recommended reading:
 Enhance the MVC Music store application to be able to send an HTTP trigger to the Function App upon a purchase.
 Build and release the entire application and order items from the store. Verify that the complete application functions as intended.
 
-Use the ShoppingCart.cs file from the GitHub repo [MVCMusicStoreEnhancee](https://github.com/Centroida/DevOps-Challenge-Exercises/tree/master/Challenge3/code/MVCMusicStoreEnhance)
+Use the ShoppingCart.cs file from the GitHub repo [MVCMusicStoreEnhance](https://github.com/Centroida/DevOps-Challenge-Exercises/tree/master/Challenge3/code/MVCMusicStoreEnhance)
 
 ### Enhance MVCMusicStore application
 
