@@ -207,6 +207,4 @@ Now you should be ready to deploy your application using CI/CD for the first tim
 
 ![](./img/cd-release.png)
 
-## Resources ##
-* [Azure SQL Database](https://docs.microsoft.com/en-us/azure/sql-database/)
-* [VSTS CI and CD overview](https://www.visualstudio.com/en-us/docs/build/overview)
+
